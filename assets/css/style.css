@@ -426,11 +426,17 @@ width: 50%;
 /* Accordion */
 .accordion__item{
     border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
 }
 .accordion__item.active
 .accordion__content{
     display: block;
 }
+.accordion__item.active
+accordion__header{
+    border-bottom-color: #e5e5e5;
+}
+
 .accordion__item.active
 .accordion__header:after{
     transform: translateY(-50%)
@@ -440,9 +446,10 @@ width: 50%;
 }
 
 .accordion__header{
-    border: 1px solid #e5e5e5;
+    border-bottom: 1px solid transparent;
     padding: 15px 20px 15px 65px;
     position: relative;
+    cursor: pointer;
 }
 .accordion__header:after{
     content: "";
